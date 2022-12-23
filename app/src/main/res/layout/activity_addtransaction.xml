@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/orange"
+    tools:context=".addtransaction">
+
+  <LinearLayout
+      android:id="@+id/logo"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/white"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+    <ImageView
+        android:layout_width="331dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/monagelogo1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/closeBtn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/ic_close"
+        tools:ignore="SpeakableTextPresentCheck" />
+  </LinearLayout>
+
+  <TextView
+      android:id="@+id/dateLayout"
+      android:layout_width="355dp"
+      android:layout_height="27dp"
+      android:layout_marginStart="26dp"
+      android:layout_marginTop="32dp"
+      android:layout_marginEnd="31dp"
+      android:layout_marginBottom="8dp"
+      android:fontFamily="@font/montserrat_alternates_semibold"
+      android:text="Tanggal"
+      android:textColor="@android:color/black"
+      android:textSize="20sp"
+      android:textStyle="bold"
+      app:errorEnabled="true"
+      app:layout_constraintBottom_toTopOf="@+id/dateInput"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+  <EditText
+      android:id="@+id/dateInput"
+      android:layout_width="355dp"
+      android:layout_height="61dp"
+      android:layout_marginStart="26dp"
+      android:layout_marginEnd="31dp"
+      android:layout_marginBottom="8dp"
+      android:background="@drawable/stroke"
+      android:hint="  (DD/MM/YY)"
+      android:inputType="text"
+      android:maxLines="1"
+      app:layout_constraintBottom_toTopOf="@+id/labelLayout"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/dateLayout" />
+
+  <TextView
+      android:id="@+id/labelLayout"
+      android:layout_width="355dp"
+      android:layout_height="27dp"
+      android:layout_marginStart="26dp"
+      android:layout_marginEnd="31dp"
+      android:layout_marginBottom="8dp"
+      android:fontFamily="@font/montserrat_alternates_semibold"
+      android:text="Label"
+      android:textColor="@android:color/black"
+      android:textSize="20sp"
+      android:textStyle="bold"
+      app:errorEnabled="true"
+      app:layout_constraintBottom_toTopOf="@+id/labelInput"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/dateInput" />
+
+  <EditText
+      android:id="@+id/labelInput"
+      android:layout_width="355dp"
+      android:layout_height="62dp"
+      android:layout_marginStart="26dp"
+      android:layout_marginEnd="31dp"
+      android:layout_marginBottom="8dp"
+      android:background="@drawable/stroke"
+      android:hint="  Tolong masukan Judul...."
+      android:inputType="text"
+      android:maxLines="1"
+      app:layout_constraintBottom_toTopOf="@+id/amountLayout"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/labelLayout" />
+
+  <TextView
+      android:id="@+id/amountLayout"
+      android:layout_width="355dp"
+      android:layout_height="27dp"
+      android:layout_marginStart="26dp"
+      android:layout_marginEnd="31dp"
+      android:layout_marginBottom="8dp"
+      android:fontFamily="@font/montserrat_alternates_semibold"
+      android:text="Jumlah"
+      android:textColor="@android:color/black"
+      android:textSize="20sp"
+      android:textStyle="bold"
+      app:errorEnabled="true"
+      app:layout_constraintBottom_toTopOf="@+id/amountInput"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/labelInput" />
+
+  <EditText
+      android:id="@+id/amountInput"
+      android:layout_width="355dp"
+      android:layout_height="66dp"
+      android:layout_marginStart="26dp"
+      android:layout_marginEnd="31dp"
+      android:layout_marginBottom="8dp"
+      android:background="@drawable/stroke"
+      android:hint="  Tolong masukan Jumlah...."
+      android:inputType="numberDecimal|numberSigned"
+      android:maxLines="1"
+      app:layout_constraintBottom_toTopOf="@+id/deskLayout"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/amountLayout" />
+
+  <TextView
+      android:id="@+id/deskLayout"
+      android:layout_width="355dp"
+      android:layout_height="27dp"
+      android:layout_marginStart="26dp"
+      android:layout_marginEnd="31dp"
+      android:layout_marginBottom="8dp"
+      android:fontFamily="@font/montserrat_alternates_semibold"
+      android:text="Deskripsi"
+      android:textColor="@android:color/black"
+      android:textSize="20sp"
+      android:textStyle="bold"
+      app:errorEnabled="true"
+      app:layout_constraintBottom_toTopOf="@+id/descInput"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/amountInput" />
+
+  <EditText
+      android:id="@+id/descInput"
+      android:layout_width="355dp"
+      android:layout_height="99dp"
+      android:layout_marginStart="26dp"
+      android:layout_marginEnd="31dp"
+      android:layout_marginBottom="16dp"
+      android:background="@drawable/stroke"
+      android:hint="  Tolong masukan Deskripsi"
+      android:inputType="text|textMultiLine"
+      app:layout_constraintBottom_toTopOf="@+id/addButton"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/deskLayout" />
+
+  <ImageButton
+      android:id="@+id/addButton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="44dp"
+      android:layout_marginTop="21dp"
+      android:layout_marginEnd="44dp"
+      android:layout_marginBottom="82dp"
+      android:background="@drawable/btnadd"
+      android:contentDescription="@string/hide_bottom_view_on_scroll_behavior"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.25"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/descInput" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
